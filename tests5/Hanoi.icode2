@@ -1,0 +1,290 @@
+icode2 Hanoi linux64
+string L6 " to "
+string L8 " from "
+string L7 "Move disk "
+string L1 "\n"
+string L5 "Move disk 1 from "
+string L0 "\nTotal moves: "
+globalVar v_0
+mainMethod m_0
+
+method m_0 1 0
+Stm167 : LABEL L10
+Exp1 : TEMP t16
+Exp2 : TEMP %r15
+Stm91 : MOVE Exp1 Exp2
+Exp3 : TEMP t17
+Exp4 : TEMP %r14
+Stm94 : MOVE Exp3 Exp4
+Exp5 : TEMP t18
+Exp6 : TEMP %r13
+Stm97 : MOVE Exp5 Exp6
+Exp7 : TEMP t19
+Exp8 : TEMP %r12
+Stm100 : MOVE Exp7 Exp8
+Exp9 : TEMP t20
+Exp10 : TEMP %rbx
+Stm103 : MOVE Exp9 Exp10
+Exp11 : TEMP t21
+Exp12 : TEMP %rdi
+Stm106 : MOVE Exp11 Exp12
+Exp13 : TEMP t22
+Exp14 : CONST 0
+Stm109 : MOVE Exp13 Exp14
+Exp173 : TEMP t34
+Exp15 : NAME v_0
+Stm111 : MOVE Exp173 Exp15
+Exp174 : TEMP t34
+Exp175 : MEM Exp174
+Exp17 : TEMP t22
+Stm114 : MOVE Exp175 Exp17
+Exp20 : NAME m_1
+Exp21 : CONST 9
+Exp22 : CONST 1
+Exp23 : CONST 2
+Exp186 : CALL Exp20 Exp21 Exp22 Exp23 
+Stm121 :  ESTM Exp186
+Exp199 : TEMP t35
+Exp29 : NAME b_intToString_0
+Exp30 : NAME v_0
+Exp194 : MEM Exp30
+Exp197 : CALL Exp29 Exp194 
+Stm125 : MOVE Exp199 Exp197
+Exp206 : TEMP t36
+Exp27 : NAME b_stringConcatenate_0
+Exp28 : NAME L0
+Exp200 : TEMP t35
+Exp204 : CALL Exp27 Exp28 Exp200 
+Stm129 : MOVE Exp206 Exp204
+Exp214 : TEMP t37
+Exp26 : NAME b_stringConcatenate_0
+Exp207 : TEMP t36
+Exp34 : NAME L1
+Exp212 : CALL Exp26 Exp207 Exp34 
+Stm133 : MOVE Exp214 Exp212
+Exp25 : NAME b_printString_0
+Exp215 : TEMP t37
+Exp218 : CALL Exp25 Exp215 
+Stm136 :  ESTM Exp218
+Stm15 : LABEL main_0
+Exp37 : TEMP %rbx
+Exp38 : TEMP t20
+Stm143 : MOVE Exp37 Exp38
+Exp39 : TEMP %r12
+Exp40 : TEMP t19
+Stm148 : MOVE Exp39 Exp40
+Exp41 : TEMP %r13
+Exp42 : TEMP t18
+Stm153 : MOVE Exp41 Exp42
+Exp43 : TEMP %r14
+Exp44 : TEMP t17
+Stm158 : MOVE Exp43 Exp44
+Exp45 : TEMP %r15
+Exp46 : TEMP t16
+Stm163 : MOVE Exp45 Exp46
+Stm166 : JUMP L9
+Stm169 : LABEL L9
+endMethod
+
+
+method m_1 3 0
+Stm343 : LABEL L12
+Exp47 : TEMP t23
+Exp48 : TEMP %r15
+Stm171 : MOVE Exp47 Exp48
+Exp49 : TEMP t24
+Exp50 : TEMP %r14
+Stm174 : MOVE Exp49 Exp50
+Exp51 : TEMP t25
+Exp52 : TEMP %r13
+Stm177 : MOVE Exp51 Exp52
+Exp53 : TEMP t26
+Exp54 : TEMP %r12
+Stm180 : MOVE Exp53 Exp54
+Exp55 : TEMP t27
+Exp56 : TEMP %rbx
+Stm183 : MOVE Exp55 Exp56
+Exp57 : TEMP t28
+Exp58 : TEMP %rdx
+Stm186 : MOVE Exp57 Exp58
+Exp59 : TEMP t29
+Exp60 : TEMP %rsi
+Stm189 : MOVE Exp59 Exp60
+Exp61 : TEMP t30
+Exp62 : TEMP %rdi
+Stm192 : MOVE Exp61 Exp62
+Exp63 : TEMP t31
+Exp64 : NAME v_0
+Exp248 : MEM Exp64
+Exp66 : CONST 1
+Exp251 : BINOP PLUS Exp248 Exp66
+Stm196 : MOVE Exp63 Exp251
+Exp256 : TEMP t38
+Exp68 : NAME v_0
+Stm198 : MOVE Exp256 Exp68
+Exp257 : TEMP t38
+Exp258 : MEM Exp257
+Exp70 : TEMP t31
+Stm201 : MOVE Exp258 Exp70
+Exp73 : TEMP t30
+Exp74 : CONST 1
+Stm206 : CJUMP EQ Exp73 Exp74 L2 L3
+Stm52 : LABEL L3
+Exp95 : TEMP t32
+Exp96 : CONST 6
+Exp97 : TEMP t29
+Exp328 : BINOP MINUS Exp96 Exp97
+Exp99 : TEMP t28
+Exp332 : BINOP MINUS Exp328 Exp99
+Stm243 : MOVE Exp95 Exp332
+Exp101 : TEMP t33
+Exp102 : TEMP t32
+Stm246 : MOVE Exp101 Exp102
+Exp347 : TEMP t46
+Exp106 : TEMP t30
+Exp107 : CONST 1
+Exp342 : BINOP MINUS Exp106 Exp107
+Stm253 : MOVE Exp347 Exp342
+Exp105 : NAME m_1
+Exp348 : TEMP t46
+Exp109 : TEMP t29
+Exp110 : TEMP t33
+Exp352 : CALL Exp105 Exp348 Exp109 Exp110 
+Stm257 :  ESTM Exp352
+Exp368 : TEMP t47
+Exp120 : NAME b_intToString_0
+Exp121 : TEMP t30
+Exp366 : CALL Exp120 Exp121 
+Stm261 : MOVE Exp368 Exp366
+Exp375 : TEMP t48
+Exp118 : NAME b_stringConcatenate_0
+Exp119 : NAME L7
+Exp369 : TEMP t47
+Exp373 : CALL Exp118 Exp119 Exp369 
+Stm265 : MOVE Exp375 Exp373
+Exp383 : TEMP t49
+Exp117 : NAME b_stringConcatenate_0
+Exp376 : TEMP t48
+Exp124 : NAME L8
+Exp381 : CALL Exp117 Exp376 Exp124 
+Stm269 : MOVE Exp383 Exp381
+Exp393 : TEMP t51
+Exp384 : TEMP t49
+Stm274 : MOVE Exp393 Exp384
+Exp391 : TEMP t50
+Exp126 : NAME b_intToString_0
+Exp127 : TEMP t29
+Exp389 : CALL Exp126 Exp127 
+Stm272 : MOVE Exp391 Exp389
+Exp400 : TEMP t52
+Exp116 : NAME b_stringConcatenate_0
+Exp394 : TEMP t51
+Exp392 : TEMP t50
+Exp398 : CALL Exp116 Exp394 Exp392 
+Stm278 : MOVE Exp400 Exp398
+Exp408 : TEMP t53
+Exp115 : NAME b_stringConcatenate_0
+Exp401 : TEMP t52
+Exp130 : NAME L6
+Exp406 : CALL Exp115 Exp401 Exp130 
+Stm282 : MOVE Exp408 Exp406
+Exp418 : TEMP t55
+Exp409 : TEMP t53
+Stm287 : MOVE Exp418 Exp409
+Exp416 : TEMP t54
+Exp132 : NAME b_intToString_0
+Exp133 : TEMP t28
+Exp414 : CALL Exp132 Exp133 
+Stm285 : MOVE Exp416 Exp414
+Exp425 : TEMP t56
+Exp114 : NAME b_stringConcatenate_0
+Exp419 : TEMP t55
+Exp417 : TEMP t54
+Exp423 : CALL Exp114 Exp419 Exp417 
+Stm291 : MOVE Exp425 Exp423
+Exp433 : TEMP t57
+Exp113 : NAME b_stringConcatenate_0
+Exp426 : TEMP t56
+Exp136 : NAME L1
+Exp431 : CALL Exp113 Exp426 Exp136 
+Stm295 : MOVE Exp433 Exp431
+Exp112 : NAME b_printString_0
+Exp434 : TEMP t57
+Exp437 : CALL Exp112 Exp434 
+Stm298 :  ESTM Exp437
+Exp448 : TEMP t58
+Exp140 : TEMP t30
+Exp141 : CONST 1
+Exp443 : BINOP MINUS Exp140 Exp141
+Stm303 : MOVE Exp448 Exp443
+Exp139 : NAME m_1
+Exp449 : TEMP t58
+Exp143 : TEMP t33
+Exp144 : TEMP t28
+Exp453 : CALL Exp139 Exp449 Exp143 Exp144 
+Stm307 :  ESTM Exp453
+Stm67 : LABEL L4
+Stm70 : LABEL hanoi_0
+Exp146 : TEMP %rbx
+Exp147 : TEMP t27
+Stm319 : MOVE Exp146 Exp147
+Exp148 : TEMP %r12
+Exp149 : TEMP t26
+Stm324 : MOVE Exp148 Exp149
+Exp150 : TEMP %r13
+Exp151 : TEMP t25
+Stm329 : MOVE Exp150 Exp151
+Exp152 : TEMP %r14
+Exp153 : TEMP t24
+Stm334 : MOVE Exp152 Exp153
+Exp154 : TEMP %r15
+Exp155 : TEMP t23
+Stm339 : MOVE Exp154 Exp155
+Stm342 : JUMP L11
+Stm46 : LABEL L2
+Exp276 : TEMP t39
+Exp81 : NAME b_intToString_0
+Exp82 : TEMP t29
+Exp274 : CALL Exp81 Exp82 
+Stm210 : MOVE Exp276 Exp274
+Exp283 : TEMP t40
+Exp79 : NAME b_stringConcatenate_0
+Exp80 : NAME L5
+Exp277 : TEMP t39
+Exp281 : CALL Exp79 Exp80 Exp277 
+Stm214 : MOVE Exp283 Exp281
+Exp291 : TEMP t41
+Exp78 : NAME b_stringConcatenate_0
+Exp284 : TEMP t40
+Exp85 : NAME L6
+Exp289 : CALL Exp78 Exp284 Exp85 
+Stm218 : MOVE Exp291 Exp289
+Exp301 : TEMP t43
+Exp292 : TEMP t41
+Stm223 : MOVE Exp301 Exp292
+Exp299 : TEMP t42
+Exp87 : NAME b_intToString_0
+Exp88 : TEMP t28
+Exp297 : CALL Exp87 Exp88 
+Stm221 : MOVE Exp299 Exp297
+Exp308 : TEMP t44
+Exp77 : NAME b_stringConcatenate_0
+Exp302 : TEMP t43
+Exp300 : TEMP t42
+Exp306 : CALL Exp77 Exp302 Exp300 
+Stm227 : MOVE Exp308 Exp306
+Exp316 : TEMP t45
+Exp76 : NAME b_stringConcatenate_0
+Exp309 : TEMP t44
+Exp91 : NAME L1
+Exp314 : CALL Exp76 Exp309 Exp91 
+Stm231 : MOVE Exp316 Exp314
+Exp75 : NAME b_printString_0
+Exp317 : TEMP t45
+Exp320 : CALL Exp75 Exp317 
+Stm234 :  ESTM Exp320
+Stm50 : JUMP L4
+Stm346 : LABEL L11
+endMethod
+
+

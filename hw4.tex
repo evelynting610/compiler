@@ -1,0 +1,221 @@
+\documentclass[11pt]{article}
+
+\oddsidemargin 0in
+\textwidth 6.5in
+\topmargin -0.5in
+\textheight 8.75in
+
+\begin{document}
+\begin{center}
+\Large \bf Compiler Project, Stage 4: Intermediate Code Generation\\ \mbox{} \\
+\large Computer Science 371 \\
+\large Amherst College \\
+\large Fall 2015
+\end{center}
+
+This assignment, due on {\bf Friday, November 20}, focuses on generating intermediate code.
+
+\section{Getting Ready}
+
+Go into your \verb'cs371' directory and issue the following commands:
+\begin{verbatim}
+      cp -r hw3 hw4                  
+      cp -r ~lamcgeoch/cs371/hw4/* hw4
+      cd hw4
+      rm Makefile
+      ln -s Makefile4 Makefile
+\end{verbatim}
+In addition, issue the command \verb'chmod -R a+w hw4' if you are working in a group directory.
+The effect of these commands is to give you a new directory, \verb'hw4'.  You have many new directories and files.
+
+Try running \verb'make'.  Assuming that your \verb'hw3' files compile correctly, it should run without errors.
+
+\section{A Tour of Some of the Directories and Files}
+
+\mbox{}\par\noindent{\bf minijava/Tree}:  This directory contains classes for all of the nodes that can appear in an intermediate tree.  Class Print gives a useful way to print a human-readable version of an intermediate tree.  If \verb'root' is the root node of your tree, you can do something like:
+\begin{verbatim}
+      Print print = new Print(System.out);
+      print.prStm(root);
+\end{verbatim}
+You won't use class StmList at this point, but you'll probably use almost everything else.
+
+\mbox{}\par\noindent{\bf minijava/Temp}:  This directory defines classes related to Temps (i.e. registers) and Labels.  The ``Maps'' define how register names should be printed on the screen, in intermediate code, or in final code.  Don't worry about them for now.
+
+\mbox{}\par\noindent{\bf minijava/Machine}:  This directory defines the interface Machine.  It defines operations that must be implemented elsewhere concerning the target architecture and assembly language.
+
+\mbox{}\par\noindent{\bf minijava/Frame}:  This directory defines the interfaces Frame and Access.
+
+\mbox{}\par\noindent{\bf minijava/Arch/Simple}:  This directory defines implementations of Machine and Frame for a simple target architecture.
+
+\mbox{}\par\noindent{\bf minijava/Translate}:  This directory defines Expr and some subclasses.  It also contains class Builtins, which contains Labels that can be used to access library functions for tasks such as printing and string manipulation.  Class ICode can be used to produce human-readable intermediate code. 
+
+\mbox{}\par\noindent{\bf Makefile4}:  This is a new version of the Makefile.
+
+\mbox{}\par\noindent{\bf minijava/Main4.java}:  This is revised from the previous release.  You ought to be able to use it without change.
+
+\mbox{}\par\noindent{\bf minijava/Interp.java}:  The main class for an interpreter, which will be described below.
+
+\mbox{}\par\noindent{\bf tests4}:  There are several new test programs and scripts.
+
+\section{Random observations}
+A step-by-step approach to doing this assignment is described in a later section.
+
+\begin{itemize}
+\item There should be no null pointers within your intermediate tree!  If you need a no-op statement, call
+\begin{verbatim}
+      Stm noop() {
+          return new ESTM(new CONST(0));
+      }
+\end{verbatim}
+
+\item You can SEQ together any number of Stms with
+\begin{verbatim}
+      Stm seq(Stm... list) {
+          Stm result = null;
+          for (Stm s : list)
+              result = (result == null) ? s : new SEQ(result, s);
+          return result;
+      }
+\end{verbatim}
+This is an example of the rarely seen ``varargs'' feature in Java.  You can call \verb'seq' with any number of Stms are arguments.  (Trivia question:  what's the one example of this that you saw in CS 11?)
+
+\item There are two constructors in BINOP.  You could write either of the following:
+\begin{verbatim}
+      new BINOP (BINOP.PLUS, e1, e2);
+      new BINOP ("PLUS", e1, e2);
+\end{verbatim}
+There are two similar constructors in CJUMP.
+
+\item You can call the ExpList constructor passing any number of Exps as parameters.  (This is another example of the ``varargs'' feature.)  If you have a linked list of Exps and you want to build an ExpList with those parameters, call the constructor with no arguments, and then one-by-one make calls to method addLast() for each parameter.
+
+\item Use ExpList containing zero elements in a CALL with no parameters.
+
+\item The process() methods for most of your parse tree statement nodes should have return type Stm.
+
+\item To print a string, for which the address is given by \verb'Exp e', use this \verb'Stm':
+\begin{verbatim}
+      new ESTM(new CALL(new NAME(builtins.printString), new ExpList (e)));
+\end{verbatim}
+
+\item To convert a int, for which the value is given by \verb'Exp e', to a String, use this \verb'Exp':
+\begin{verbatim}
+      new CALL(new NAME(builtins.intToString), new ExpList (e));
+\end{verbatim}
+
+\item To concatenate two strings, for which the addresses are given by \verb'Exp left' and \verb'Exp right', use this \verb'Exp':
+\begin{verbatim}
+      new CALL(new NAME(builtins.stringConcatenate), new ExpList (left, right));
+\end{verbatim}
+
+\item To get the length of a string, for which the address is given by \verb'Exp s', use this \verb'Exp':
+\begin{verbatim}
+      new CALL(new NAME(builtins.stringLength), new ExpList (s));
+\end{verbatim}
+
+\item To index in a one-dimensional array, construct a tree fragment that takes a pointer to the first array element, as obtained with an Access, and then adds machine.wordSize() times the index to get a pointer to the actual element.  That pointer then can be dereferenced with MEM to get the contained value.  If there is another dimension to the array, the ``contained value'' is a pointer to another array.  It can be adjusted by the second index, and so on.
+
+\item The length of an array is stored as an integer in position $-1$ of the array.
+
+\item To create an array, for which the length is given by \verb'Exp n', use this \verb'Exp':
+\begin{verbatim}
+      new CALL(new NAME(builtins.createArray), new ExpList (n));
+\end{verbatim}
+Don't worry about accounting for the element in position $-1$.  It is created automatically as an extra element of the array.
+\end{itemize}
+
+\section{Getting started}
+You make find it helpful to build in small steps, recompiling frequently.
+
+\begin{enumerate}
+\item In \verb'Main4', uncomment the two extra parameters in constructor call for \verb'Typechecker'.  Add matching code in the constructor to store the values.
+\item Remove classes \verb'Expr' and \verb'ExprType' from directory \verb'Typechecker', if you have them.  Add \verb'import minijava.Translate.*;' as needed so that their new versions can be found. Be prepared to add numerous import lines as you work on this assignment.
+\item For each global variable, create a label by calling \verb'machine.makeLabel', based on a string with prefix \verb'v_'.  Include the label in your Var object.
+\item Do something similar for each method.
+\item After the last parameter is found, call something like \verb'currentMethod.makeFrame(machine)'.  That method can call \verb'machine.makeFrame(label)', and the resulting Frame can be stored in the method.  Call \verb'frame.createParameterAccesses' to create Access objects for the parameters.
+\item For each local variable, call \verb'frame.allocLocal()' to create an Access.
+\item Add a hidden local variable to each method that isn't \verb'void'.  Each return statement should yield code that assigns a value to that variable.
+\item Create an extra ``exit label'' for each method.  Whenever there is a return statement, the intermediate code should jump to that label.  If the method is void, a LABEL for the exit label should be the last Stm represented in the intermediate tree.  If the method isn't void, the last two STMs should be 1) the label, and 2) a MOVE that copies the return value from your return value Temp into the real return value register (obtained using method RV() in class Frame.
+\item Add a \verb'HashMap<String,Label>' to \verb'Typechecker'.  Use it to associate strings with labels.  Whenever you encounter a string constant, check the map to find its label.  It's not in the map, make a new Temp.Label() and add an entry to the map.
+\item Add an instance variable \verb'builtins' to \verb'Typechecker'.  Call \verb'new Builtins(machine)' to create a value for it.  (This will facilitate calls to built-in methods.)
+\item Now plunge into \verb'Phase2', starting at the bottom.  (If you're like me, your Phase2 might have delegated some work to Typechecker, so be prepared to work there, too.)  Create \verb'Ex', \verb'CxRel', or other objects (based on subclasses of \verb'Expr'), as needed.  One indication that a method needs work will be the presence of \verb'null' as an \verb'Expr'.
+\item The Stm that represents the body of a method---don't forget to add the exit label---should be saved with the Method object.
+\item Add code that's something like this to your Method class:
+\begin{verbatim}
+       public String createICode() {
+           Stm b = frame.procEntryExit1(body);
+
+           return "method " + label + " " 
+               + b.idString() + " "
+               + frame.getFrameInfo() + "\n" 
+               + new ICode(b, frame)
+               + "endMethod\n\n";
+       }
+\end{verbatim}
+\item Add code that's something like this to your Typechecker class:
+\begin{verbatim}
+       Method findMainMethod() {
+           for (Method m : methodList) {
+               if (m.name.equals("main") &&
+                   m.paramTypes.size() == 1 &&
+                   m.paramTypes.get(0).equals(new ArrayType(Type.stringType)))
+                   return m;
+           }
+           throw new RuntimeException ("no main method!");
+       }
+\end{verbatim}
+
+\item Add code that's something like this to your Typechecker class:
+\begin{verbatim}
+       public String createICode() {
+           StringBuffer sb = new StringBuffer();
+        
+           for (String s: stringMap.keySet())
+                sb.append ("string " + stringMap.get(s) + " " + s + "\n");
+
+            for (Var v : classVarMap.values())
+                sb.append ("globalVar " + v.label + "\n");
+
+            sb.append ("mainMethod " + findMainMethod().label + "\n\n");
+
+            for (Method m : methodList)
+                sb.append (m.createICode() + "\n");
+
+            return sb.toString();
+        }
+\end{verbatim}
+\item Uncomment the commented section at the end of the main method is Main4.java.
+
+\end{enumerate}
+ 
+\section{Compiling a Minijava Program and Running the Interpreter}
+To compile a test program and run the interpreter, you can type:
+\begin{verbatim}
+      ./compile -target simple Whatever.java
+      ./interp Whatever.icode1
+\end{verbatim}
+The \verb'-target simple' option means that you want to use the simple architecture as your target machine.
+
+Alternatively, you can type:
+\begin{verbatim}
+      ./doit Whatever.java
+\end{verbatim}
+which will do the same thing.
+
+\section{Using the Interpreter, which is also a Debugger}
+
+When you start the interpreter, you'll get a prompt like this:
+\begin{verbatim}
+      interpreter>
+\end{verbatim}
+If you type \verb'run', your program will simply run.  The various \verb'debug' commands will print various things while you execute.  (\verb'debug 1' may be the most useful.)  
+
+Command \verb'break' sets a breakpoint.  For example you might type \verb'break m_hanoi_0' to cause execution to stop when you reach a particular method.  (\verb'm_hanoi_0' is the label that was generated for method \verb'hanoi' in my Towers of Hanoi program.  Look at your intermediate code or run \verb'methods' within the debugger to get a list of the methods in your program.)  If you set breakpoints and then do \verb'run', the program will run until one of the breakpoints is reached.
+
+Command \verb'step', an alternative to \verb'run', takes you through the program one step at a time.  It's sometimes useful to run until a breakpoint and to take steps from there.  Once you begin stepping, you can keep hitting the enter key to take more steps.  If you type \verb'b' or \verb'?', you'll be back at the \verb'interpreter>' prompt.
+
+Good luck!  Questions?  Let me know.
+
+\section{Submitting Your Work}
+Submit your work in the usual way.
+
+\end{document}

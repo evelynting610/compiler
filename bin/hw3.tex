@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+
+\oddsidemargin 0in
+\textwidth 6.5in
+\topmargin -0.5in
+\textheight 8.75in
+
+\begin{document}
+\begin{center}
+\Large \bf Compiler Project, Stage 3: Typechecking  II\\ \mbox{} \\
+\large Computer Science 371 \\
+\large Amherst College \\
+\large Fall 2015
+\end{center}
+
+This assignment, due on {\bf Tuesday, October 27}, focuses on the second part of typechecking.
+
+\section{Your Goal}
+
+Your goal is implement the second phase of typechecking, which processes the bodies of the methods in the input program.
+
+\section{Things You'll Probably Want to Do}
+
+The only new files this week are in directory \verb'tests3'.  You should go into your {\tt cs371} directory and do
+\begin{verbatim}
+    cp -r hw2 hw3       // Make a new copy of your directory.
+    cp -r ~lamcgeoch/cs371/hw3/* hw3
+    [chmod -R a+w hw3]  // Fix permissions only if you're working in a shared directory.
+\end{verbatim}
+
+In {\tt hw3}, I suggest that you make a second copy of {\bf analysis/AmhTraversal.java} and call it 
+{\bf Typechecker/Phase2.java}.  Add lines to {\bf Main.java} and {\bf Typechecker/Typechecker.java} that mimic the calls used in phase 1.
+
+I also suggest that you add the following class in directory Typechecker:
+\begin{verbatim}
+    package minijava.Typechecker;
+
+    public class ExprType {
+        static class Expr {}
+        
+        Expr expr;
+        Type type;
+        
+        ExprType (Expr e, Type t) {
+            expr = e;
+            type = t;
+        }
+    }
+\end{verbatim}
+
+The purpose of these classes is to get you ready for the building of your intermediate tree, which can be done as part of phase 2.  An ExprType object rolls together both a type and a fragment of intermediate code that computes a value.  For now we ignore intermediate code, so class Expr is empty.
+
+There are numerous node classes for which the return type of {\it process(NodeType)} should be ExprType.  These include almost all versions of {\it process()} that appear in {\bf Phase2.java} at and below the entry for {\it{process(PExpr)}}.  (PArgList, AListArgList, PEmptydim, and AEmptyDim seem to be the exceptions.)  To return a type as an ExprType, simply use
+\begin{verbatim}
+    return new ExprType (null, type);
+\end{verbatim}
+where \verb'type' is the chosen type.
+
+As you edit {\bf Phase2.java}, don't remove any methods or any of the calls that are part of the traversal.  You might need them in building the intermediate tree.  (Maybe not, but why prematurely optimize your code?)
+
+Throw an exception whenever you encounter a typechecking error.  If there are no errors, print the contents of the symbol tables that you have built.
+
+\section{Test Instances}
+There are many new test instances in \verb'tests3'.  Feel free to send me more to share with your classmates.
+
+\section{Submitting Your Work}
+Submit your project electronically at the usual site.
+\end{document}
+

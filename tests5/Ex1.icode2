@@ -1,0 +1,75 @@
+icode2 Ex1 linux64
+string L0 "The result is \n\n"
+mainMethod m_0
+
+method m_0 1 0
+Stm105 : LABEL L2
+Exp1 : TEMP t16
+Exp2 : TEMP %r15
+Stm34 : MOVE Exp1 Exp2
+Exp3 : TEMP t17
+Exp4 : TEMP %r14
+Stm37 : MOVE Exp3 Exp4
+Exp5 : TEMP t18
+Exp6 : TEMP %r13
+Stm40 : MOVE Exp5 Exp6
+Exp7 : TEMP t19
+Exp8 : TEMP %r12
+Stm43 : MOVE Exp7 Exp8
+Exp9 : TEMP t20
+Exp10 : TEMP %rbx
+Stm46 : MOVE Exp9 Exp10
+Exp11 : TEMP t21
+Exp12 : TEMP %rdi
+Stm49 : MOVE Exp11 Exp12
+Exp69 : TEMP t24
+Exp15 : CONST 3
+Exp16 : CONST 4
+Exp62 : BINOP PLUS Exp15 Exp16
+Stm54 : MOVE Exp69 Exp62
+Exp14 : TEMP t22
+Exp70 : TEMP t24
+Exp18 : CONST 5
+Exp19 : CONST 6
+Exp67 : BINOP PLUS Exp18 Exp19
+Exp72 : BINOP MUL Exp70 Exp67
+Stm58 : MOVE Exp14 Exp72
+Exp22 : TEMP t23
+Exp23 : TEMP t22
+Stm61 : MOVE Exp22 Exp23
+Exp87 : TEMP t25
+Exp29 : NAME b_intToString_0
+Exp30 : TEMP t23
+Exp85 : CALL Exp29 Exp30 
+Stm67 : MOVE Exp87 Exp85
+Exp94 : TEMP t26
+Exp27 : NAME b_stringConcatenate_0
+Exp28 : NAME L0
+Exp88 : TEMP t25
+Exp92 : CALL Exp27 Exp28 Exp88 
+Stm71 : MOVE Exp94 Exp92
+Exp26 : NAME b_printString_0
+Exp95 : TEMP t26
+Exp98 : CALL Exp26 Exp95 
+Stm74 :  ESTM Exp98
+Stm15 : LABEL main_0
+Exp34 : TEMP %rbx
+Exp35 : TEMP t20
+Stm81 : MOVE Exp34 Exp35
+Exp36 : TEMP %r12
+Exp37 : TEMP t19
+Stm86 : MOVE Exp36 Exp37
+Exp38 : TEMP %r13
+Exp39 : TEMP t18
+Stm91 : MOVE Exp38 Exp39
+Exp40 : TEMP %r14
+Exp41 : TEMP t17
+Stm96 : MOVE Exp40 Exp41
+Exp42 : TEMP %r15
+Exp43 : TEMP t16
+Stm101 : MOVE Exp42 Exp43
+Stm104 : JUMP L1
+Stm107 : LABEL L1
+endMethod
+
+

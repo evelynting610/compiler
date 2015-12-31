@@ -1,0 +1,51 @@
+icode2 ArrayLength linux64
+mainMethod m_0
+
+method m_0 1 0
+Stm80 : LABEL L1
+Exp1 : TEMP t16
+Exp2 : TEMP %r15
+Stm29 : MOVE Exp1 Exp2
+Exp3 : TEMP t17
+Exp4 : TEMP %r14
+Stm32 : MOVE Exp3 Exp4
+Exp5 : TEMP t18
+Exp6 : TEMP %r13
+Stm35 : MOVE Exp5 Exp6
+Exp7 : TEMP t19
+Exp8 : TEMP %r12
+Stm38 : MOVE Exp7 Exp8
+Exp9 : TEMP t20
+Exp10 : TEMP %rbx
+Stm41 : MOVE Exp9 Exp10
+Exp11 : TEMP t21
+Exp12 : TEMP %rdi
+Stm44 : MOVE Exp11 Exp12
+Exp14 : NAME b_printString_0
+Exp15 : TEMP t22
+Exp16 : CONST 8
+Exp48 : BINOP MINUS Exp15 Exp16
+Exp50 : MEM Exp48
+Exp53 : CALL Exp14 Exp50 
+Stm49 :  ESTM Exp53
+Stm10 : LABEL main_0
+Exp20 : TEMP %rbx
+Exp21 : TEMP t20
+Stm56 : MOVE Exp20 Exp21
+Exp22 : TEMP %r12
+Exp23 : TEMP t19
+Stm61 : MOVE Exp22 Exp23
+Exp24 : TEMP %r13
+Exp25 : TEMP t18
+Stm66 : MOVE Exp24 Exp25
+Exp26 : TEMP %r14
+Exp27 : TEMP t17
+Stm71 : MOVE Exp26 Exp27
+Exp28 : TEMP %r15
+Exp29 : TEMP t16
+Stm76 : MOVE Exp28 Exp29
+Stm79 : JUMP L0
+Stm82 : LABEL L0
+endMethod
+
+

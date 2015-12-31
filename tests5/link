@@ -1,0 +1,8 @@
+#!/bin/csh
+if (( $OSTYPE == "linux") && ($MACHTYPE == "x86_64")) then
+    gcc $1 ../arch/linux64.o -o `basename $1 .s`
+else if (( $OSTYPE == "darwin") && ($MACHTYPE == "x86_64")) then
+    gcc $1 ../arch/darwin64.o -o `basename $1 .s`
+else
+    gcc $1 ../arch/$OSTYPE.o -o `basename $1 .s`
+endif

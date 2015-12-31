@@ -1,0 +1,56 @@
+Format of .icode1 files:
+
+---First line has three tokens:
+	---the string "icode1"
+
+	---the basename of the original source code file.  
+
+		(If the first phase of the compiler was invoked with the line
+			java FrontEnd tests/MyTest.java
+		
+		the basename is "tests/MyTest", and the second call should be
+			java BackEnd  tests/MyTest.icode1
+		
+		Compiler writers can, of course, use other names instead of FrontEnd and
+		Backend.
+
+	---the name of the architecture (e.g. linux) used in the front end.
+
+---Zero or more lines describing string literals.  Each line should contain:
+	---the string "string"
+
+	---the label (e.g. L20) assigned to the string
+
+	---the string literal.  It should follow the string literal format used
+		in the target assembly language, including quotation marks.
+
+---Zero or more lines describing global variables.  Each line should contain:
+	---the string "globalVar"
+	---the label for the global variable
+
+---A line giving the name of the main method.  It should contain:
+	---the string "mainMethod"
+	---the label for the main method
+
+---Intermediate code for the methods.  The first line for each method should contain
+	---the string "method"
+	---the label of the method
+	---the label of the Stm node (e.g. Stm175) at the root of the intermediate code tree
+	---architecture-dependent information about the frame.  This could contain, for example,
+		the number of parameters for the method
+
+	It is assumed that the entry point for the method is at the beginning of the intermediate
+	code and that the exit point is at the end.
+
+---The body of each method is described by a sequence of lines describing the nodes in the
+	intermediate tree.  The nodes must be listed based on a preorder traveral of the tree.
+	This implies that the description of the root appears last.
+
+---Each line of intermediate code consists of a label, a colon, a node type, and operands.  For
+	example:
+		Exp244 : ESEQ Stm151 Exp254
+
+	Calls to the icode() method in the various subclasses of Tree.Stm and Tree.Exp will produce
+	correctly formatted lines.
+
+---Each method ends with a line containing the string "endMethod".

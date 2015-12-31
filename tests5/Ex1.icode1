@@ -1,0 +1,83 @@
+icode1 Ex1 linux64
+string L0 "The result is \n\n"
+mainMethod m_0
+
+method m_0 Stm32 1 0
+Exp42 : TEMP t23
+Exp43 : TEMP %r15
+Stm29 : MOVE Exp42 Exp43
+Exp38 : TEMP t22
+Exp39 : TEMP %r14
+Stm25 : MOVE Exp38 Exp39
+Exp34 : TEMP t21
+Exp35 : TEMP %r13
+Stm21 : MOVE Exp34 Exp35
+Exp30 : TEMP t20
+Exp31 : TEMP %r12
+Stm17 : MOVE Exp30 Exp31
+Exp26 : TEMP t19
+Exp27 : TEMP %rbx
+Stm13 : MOVE Exp26 Exp27
+Exp24 : TEMP t16
+Exp25 : TEMP %rdi
+Stm11 : MOVE Exp24 Exp25
+Exp1 : CONST 0
+Stm1 :  ESTM Exp1
+Exp11 : TEMP t18
+Exp4 : CONST 3
+Exp5 : CONST 4
+Exp6 : BINOP PLUS Exp4 Exp5
+Exp7 : CONST 5
+Exp8 : CONST 6
+Exp9 : BINOP PLUS Exp7 Exp8
+Exp10 : BINOP MUL Exp6 Exp9
+Stm2 : MOVE Exp11 Exp10
+Exp3 : TEMP t17
+Exp12 : TEMP t18
+Stm3 : MOVE Exp3 Exp12
+Stm4 : SEQ Stm2 Stm3
+Exp13 : TEMP t18
+Exp14 : ESEQ Stm4 Exp13
+Stm5 :  ESTM Exp14
+Stm6 : SEQ Stm1 Stm5
+Exp22 : NAME b_printString_0
+Exp20 : NAME b_stringConcatenate_0
+Exp15 : NAME L0
+Exp18 : NAME b_intToString_0
+Exp17 : TEMP t17
+Exp19 : CALL Exp18 Exp17 
+Exp21 : CALL Exp20 Exp15 Exp19 
+Exp23 : CALL Exp22 Exp21 
+Stm7 :  ESTM Exp23
+Stm8 : SEQ Stm6 Stm7
+Stm9 : LABEL main_0
+Stm10 : SEQ Stm8 Stm9
+Stm12 : SEQ Stm11 Stm10
+Stm14 : SEQ Stm13 Stm12
+Exp28 : TEMP %rbx
+Exp29 : TEMP t19
+Stm15 : MOVE Exp28 Exp29
+Stm16 : SEQ Stm14 Stm15
+Stm18 : SEQ Stm17 Stm16
+Exp32 : TEMP %r12
+Exp33 : TEMP t20
+Stm19 : MOVE Exp32 Exp33
+Stm20 : SEQ Stm18 Stm19
+Stm22 : SEQ Stm21 Stm20
+Exp36 : TEMP %r13
+Exp37 : TEMP t21
+Stm23 : MOVE Exp36 Exp37
+Stm24 : SEQ Stm22 Stm23
+Stm26 : SEQ Stm25 Stm24
+Exp40 : TEMP %r14
+Exp41 : TEMP t22
+Stm27 : MOVE Exp40 Exp41
+Stm28 : SEQ Stm26 Stm27
+Stm30 : SEQ Stm29 Stm28
+Exp44 : TEMP %r15
+Exp45 : TEMP t23
+Stm31 : MOVE Exp44 Exp45
+Stm32 : SEQ Stm30 Stm31
+endMethod
+
+

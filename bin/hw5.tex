@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+
+\oddsidemargin 0in
+\textwidth 6.5in
+\topmargin -0.5in
+\textheight 8.75in
+
+\begin{document}
+\begin{center}
+\Large \bf Compiler Project, Stage 5: Instruction Selection!\\ \mbox{} \\
+\large Computer Science 371 \\
+\large Amherst College \\
+\large Fall 2015
+\end{center}
+
+This assignment is due on {\bf Monday, December 14}.
+
+\section{Getting Ready}
+
+Go into your \verb'cs371' directory and issue the following commands:
+\begin{verbatim}
+      cp -r hw4 hw5          
+      cp -r ~lamcgeoch/cs371/hw5/* hw5
+      cd hw5
+      rm Makefile
+      ln -s Makefile5 Makefile
+\end{verbatim}
+In addition, issue the command \verb'chmod -R a+w hw5' if you are working in a group directory.
+The effect of these commands is to give you a new directory, \verb'hw5'.  You have many new directories and files.
+
+Try running \verb'make'.  Assuming that your \verb'hw4' files compile correctly, it should run without errors.
+
+\section{New files in this Release}
+
+\mbox{}\par\noindent{\bf Makefile5}: You should save your old Makefile and then rename this one to replace it.
+
+\mbox{}\par\noindent{\bf arch}:  Contains object code required for library calls (for printing, string manipulation, etc.) on different architectures.
+
+\mbox{}\par\noindent{\bf tests5}:  (Note the name!)  Contains test programs and scripts for running them.  You should strive to have your compiler work correctly on all the .java files in this directory. 
+
+\mbox{}\par\noindent{\bf minijava/Canonical.java}:  A main program for converting .icode1 files into linearized .icode2 files.
+
+\mbox{}\par\noindent{\bf minijava/Interp2.java}:  A main program for interpreting .icode2 files.
+
+\mbox{}\par\noindent{\bf minijava/CodeGen.java}:  A main program for converting .icode2 files into assembly code.
+
+\mbox{}\par\noindent{\bf minijava/Canon}:  Code for canonicalization.
+
+\mbox{}\par\noindent{\bf minijava/BackEnd}:  Lots of code for various back-end activities.
+
+\mbox{}\par\noindent{\bf minijava/BackEnd/Arch/Linux64/CodeGen.java}:  {\bf This is the file that you should fill in to do code generation.}
+
+\section{Your Task}
+Your task is to do instruction selection, working in the file listed above.  We'll talk lots about this task in class, and I may have further written instructions and/or advice.  
+
+One way to print the result of your instruction selection is to uncomment lines that you will find in {\bf minijava/BackEnd/ICode/Method.java}.
+
+\section{Running Various Scripts}
+
+To compile, link, and execute a .java program, you can type:
+
+\begin{verbatim}
+      ./doit Hanoi.java
+\end{verbatim}
+
+Once you have an executable, you can simply run:
+\begin{verbatim}
+      ./Hanoi
+\end{verbatim}
+
+You can run separate programs for various phases of compilation.  To produce intermediate code for the Linux64 architecture, do:
+\begin{verbatim}
+      ./compile Hanoi.java
+\end{verbatim}
+
+To linearize the resulting intermediate code, do:
+\begin{verbatim}
+      ./canonical Hanoi.icode1
+\end{verbatim}
+
+(You can run an interpreter on .icode2 files, but you probably won't need to do this.  The proper sequence of commands would be:
+\begin{verbatim}
+      ./compile -target simple Hanoi.java
+      ./canonical Hanoi.icode1
+      ./interp2 Hanoi.icode2
+\end{verbatim}
+In other words, the interpreter only works when you are targetting the simple architecture.)
+
+To create assembly code from .icode2 files, do:
+\begin{verbatim}
+      ./codegen Hanoi.icode2
+\end{verbatim}
+
+To assemble and link the result assembly file, do:
+\begin{verbatim}
+      ./link Hanoi.s
+\end{verbatim}
+
+\section{Submitting Your Work}
+To do an electronic submission in the usual way.
+
+\end{document}
+

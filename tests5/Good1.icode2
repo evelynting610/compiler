@@ -1,0 +1,254 @@
+icode2 Good1 linux64
+string L0 "hi"
+string L1 "h"
+globalVar v_1
+globalVar v_0
+mainMethod m_4
+
+method m_0 3 0
+Stm209 : LABEL L3
+Exp1 : TEMP t16
+Exp2 : TEMP %r15
+Stm155 : MOVE Exp1 Exp2
+Exp3 : TEMP t17
+Exp4 : TEMP %r14
+Stm158 : MOVE Exp3 Exp4
+Exp5 : TEMP t18
+Exp6 : TEMP %r13
+Stm161 : MOVE Exp5 Exp6
+Exp7 : TEMP t19
+Exp8 : TEMP %r12
+Stm164 : MOVE Exp7 Exp8
+Exp9 : TEMP t20
+Exp10 : TEMP %rbx
+Stm167 : MOVE Exp9 Exp10
+Exp11 : TEMP t21
+Exp12 : TEMP %rdx
+Stm170 : MOVE Exp11 Exp12
+Exp13 : TEMP t22
+Exp14 : TEMP %rsi
+Stm173 : MOVE Exp13 Exp14
+Exp15 : TEMP t23
+Exp16 : TEMP %rdi
+Stm176 : MOVE Exp15 Exp16
+Stm10 : LABEL f_0
+Exp18 : TEMP %rbx
+Exp19 : TEMP t20
+Stm185 : MOVE Exp18 Exp19
+Exp20 : TEMP %r12
+Exp21 : TEMP t19
+Stm190 : MOVE Exp20 Exp21
+Exp22 : TEMP %r13
+Exp23 : TEMP t18
+Stm195 : MOVE Exp22 Exp23
+Exp24 : TEMP %r14
+Exp25 : TEMP t17
+Stm200 : MOVE Exp24 Exp25
+Exp26 : TEMP %r15
+Exp27 : TEMP t16
+Stm205 : MOVE Exp26 Exp27
+Stm208 : JUMP L2
+Stm211 : LABEL L2
+endMethod
+
+
+method m_1 0 0
+Stm262 : LABEL L5
+Exp28 : TEMP t24
+Exp29 : TEMP %r15
+Stm213 : MOVE Exp28 Exp29
+Exp30 : TEMP t25
+Exp31 : TEMP %r14
+Stm216 : MOVE Exp30 Exp31
+Exp32 : TEMP t26
+Exp33 : TEMP %r13
+Stm219 : MOVE Exp32 Exp33
+Exp34 : TEMP t27
+Exp35 : TEMP %r12
+Stm222 : MOVE Exp34 Exp35
+Exp36 : TEMP t28
+Exp37 : TEMP %rbx
+Stm225 : MOVE Exp36 Exp37
+Exp38 : TEMP t29
+Exp39 : CONST 0
+Stm228 : MOVE Exp38 Exp39
+Stm38 : LABEL g_0
+Exp40 : TEMP %rax
+Exp41 : TEMP t29
+Stm232 : MOVE Exp40 Exp41
+Exp42 : TEMP %rbx
+Exp43 : TEMP t28
+Stm238 : MOVE Exp42 Exp43
+Exp44 : TEMP %r12
+Exp45 : TEMP t27
+Stm243 : MOVE Exp44 Exp45
+Exp46 : TEMP %r13
+Exp47 : TEMP t26
+Stm248 : MOVE Exp46 Exp47
+Exp48 : TEMP %r14
+Exp49 : TEMP t25
+Stm253 : MOVE Exp48 Exp49
+Exp50 : TEMP %r15
+Exp51 : TEMP t24
+Stm258 : MOVE Exp50 Exp51
+Stm261 : JUMP L4
+Stm263 : LABEL L4
+endMethod
+
+
+method m_2 1 0
+Stm318 : LABEL L7
+Exp52 : TEMP t30
+Exp53 : TEMP %r15
+Stm265 : MOVE Exp52 Exp53
+Exp54 : TEMP t31
+Exp55 : TEMP %r14
+Stm268 : MOVE Exp54 Exp55
+Exp56 : TEMP t32
+Exp57 : TEMP %r13
+Stm271 : MOVE Exp56 Exp57
+Exp58 : TEMP t33
+Exp59 : TEMP %r12
+Stm274 : MOVE Exp58 Exp59
+Exp60 : TEMP t34
+Exp61 : TEMP %rbx
+Stm277 : MOVE Exp60 Exp61
+Exp62 : TEMP t35
+Exp63 : TEMP %rdi
+Stm280 : MOVE Exp62 Exp63
+Exp64 : TEMP t36
+Exp65 : NAME L0
+Stm283 : MOVE Exp64 Exp65
+Stm66 : LABEL h_0
+Exp66 : TEMP %rax
+Exp67 : TEMP t36
+Stm287 : MOVE Exp66 Exp67
+Exp68 : TEMP %rbx
+Exp69 : TEMP t34
+Stm294 : MOVE Exp68 Exp69
+Exp70 : TEMP %r12
+Exp71 : TEMP t33
+Stm299 : MOVE Exp70 Exp71
+Exp72 : TEMP %r13
+Exp73 : TEMP t32
+Stm304 : MOVE Exp72 Exp73
+Exp74 : TEMP %r14
+Exp75 : TEMP t31
+Stm309 : MOVE Exp74 Exp75
+Exp76 : TEMP %r15
+Exp77 : TEMP t30
+Stm314 : MOVE Exp76 Exp77
+Stm317 : JUMP L6
+Stm319 : LABEL L6
+endMethod
+
+
+method m_3 3 0
+Stm374 : LABEL L9
+Exp78 : TEMP t37
+Exp79 : TEMP %r15
+Stm321 : MOVE Exp78 Exp79
+Exp80 : TEMP t38
+Exp81 : TEMP %r14
+Stm324 : MOVE Exp80 Exp81
+Exp82 : TEMP t39
+Exp83 : TEMP %r13
+Stm327 : MOVE Exp82 Exp83
+Exp84 : TEMP t40
+Exp85 : TEMP %r12
+Stm330 : MOVE Exp84 Exp85
+Exp86 : TEMP t41
+Exp87 : TEMP %rbx
+Stm333 : MOVE Exp86 Exp87
+Exp88 : TEMP t42
+Exp89 : TEMP %rdx
+Stm336 : MOVE Exp88 Exp89
+Exp90 : TEMP t43
+Exp91 : TEMP %rsi
+Stm339 : MOVE Exp90 Exp91
+Exp92 : TEMP t44
+Exp93 : TEMP %rdi
+Stm342 : MOVE Exp92 Exp93
+Stm95 : LABEL f_1
+Exp94 : TEMP %rbx
+Exp95 : TEMP t41
+Stm350 : MOVE Exp94 Exp95
+Exp96 : TEMP %r12
+Exp97 : TEMP t40
+Stm355 : MOVE Exp96 Exp97
+Exp98 : TEMP %r13
+Exp99 : TEMP t39
+Stm360 : MOVE Exp98 Exp99
+Exp100 : TEMP %r14
+Exp101 : TEMP t38
+Stm365 : MOVE Exp100 Exp101
+Exp102 : TEMP %r15
+Exp103 : TEMP t37
+Stm370 : MOVE Exp102 Exp103
+Stm373 : JUMP L8
+Stm375 : LABEL L8
+endMethod
+
+
+method m_4 1 0
+Stm450 : LABEL L11
+Exp104 : TEMP t45
+Exp105 : TEMP %r15
+Stm377 : MOVE Exp104 Exp105
+Exp106 : TEMP t46
+Exp107 : TEMP %r14
+Stm380 : MOVE Exp106 Exp107
+Exp108 : TEMP t47
+Exp109 : TEMP %r13
+Stm383 : MOVE Exp108 Exp109
+Exp110 : TEMP t48
+Exp111 : TEMP %r12
+Stm386 : MOVE Exp110 Exp111
+Exp112 : TEMP t49
+Exp113 : TEMP %rbx
+Stm389 : MOVE Exp112 Exp113
+Exp114 : TEMP t50
+Exp115 : TEMP %rdi
+Stm392 : MOVE Exp114 Exp115
+Exp117 : TEMP t51
+Exp118 : NAME L1
+Stm396 : MOVE Exp117 Exp118
+Exp119 : TEMP t52
+Exp120 : TEMP t51
+Stm399 : MOVE Exp119 Exp120
+Exp278 : TEMP t55
+Exp125 : NAME m_2
+Exp126 : TEMP t52
+Exp276 : CALL Exp125 Exp126 
+Stm407 : MOVE Exp278 Exp276
+Exp124 : TEMP t53
+Exp279 : TEMP t55
+Stm410 : MOVE Exp124 Exp279
+Exp128 : TEMP t54
+Exp129 : TEMP t53
+Stm413 : MOVE Exp128 Exp129
+Exp132 : NAME b_printString_0
+Exp133 : TEMP t54
+Exp288 : CALL Exp132 Exp133 
+Stm419 :  ESTM Exp288
+Stm136 : LABEL main_0
+Exp135 : TEMP %rbx
+Exp136 : TEMP t49
+Stm426 : MOVE Exp135 Exp136
+Exp137 : TEMP %r12
+Exp138 : TEMP t48
+Stm431 : MOVE Exp137 Exp138
+Exp139 : TEMP %r13
+Exp140 : TEMP t47
+Stm436 : MOVE Exp139 Exp140
+Exp141 : TEMP %r14
+Exp142 : TEMP t46
+Stm441 : MOVE Exp141 Exp142
+Exp143 : TEMP %r15
+Exp144 : TEMP t45
+Stm446 : MOVE Exp143 Exp144
+Stm449 : JUMP L10
+Stm452 : LABEL L10
+endMethod
+
+

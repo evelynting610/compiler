@@ -1,0 +1,40 @@
+#
+
+set argcount=$#
+set lastarg=$argv[$argcount]
+set dir=`dirname $lastarg`
+set base=`basename $lastarg .java`
+
+#echo There are $argcount arguments.
+#echo The last one is $lastarg.
+
+echo "Creating intermediate tree..."
+java -cp .. minijava.Main5 $*
+
+if ($? != 0) exit
+
+echo "Linearizing intermediate tree..."
+java -cp .. minijava.Canonical $dir/$base.icode1
+
+if ($? != 0) exit
+
+echo "Generating assembly code..."
+java -cp .. minijava.CodeGen $dir/$base.icode2
+
+if ($? != 0) exit
+
+echo "Assembling and linking..."
+
+if (( $OSTYPE == "linux") && ($MACHTYPE == "x86_64")) then
+   gcc $dir/$base.s ../arch/linux64.o -o $dir/$base
+else if (( $OSTYPE == "darwin") && ($MACHTYPE == "x86_64")) then
+   gcc $dir/$base.s ../arch/darwin64.o -o $dir/$base
+else
+   gcc $dir/$base.s ../arch/$OSTYPE.o -o $dir/$base
+endif
+
+if ($? != 0) exit
+
+echo "Running..."
+$dir/$base
+

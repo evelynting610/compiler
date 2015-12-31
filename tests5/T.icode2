@@ -1,0 +1,55 @@
+icode2 T linux64
+string L0 "Hello\n"
+mainMethod m_0
+
+method m_0 1 0
+Stm93 : LABEL L2
+Exp1 : TEMP t16
+Exp2 : TEMP %r15
+Stm34 : MOVE Exp1 Exp2
+Exp3 : TEMP t17
+Exp4 : TEMP %r14
+Stm37 : MOVE Exp3 Exp4
+Exp5 : TEMP t18
+Exp6 : TEMP %r13
+Stm40 : MOVE Exp5 Exp6
+Exp7 : TEMP t19
+Exp8 : TEMP %r12
+Stm43 : MOVE Exp7 Exp8
+Exp9 : TEMP t20
+Exp10 : TEMP %rbx
+Stm46 : MOVE Exp9 Exp10
+Exp11 : TEMP t21
+Exp12 : TEMP %rdi
+Stm49 : MOVE Exp11 Exp12
+Exp14 : TEMP t22
+Exp15 : NAME L0
+Stm53 : MOVE Exp14 Exp15
+Exp16 : TEMP t23
+Exp17 : TEMP t22
+Stm56 : MOVE Exp16 Exp17
+Exp20 : NAME b_printString_0
+Exp21 : TEMP t23
+Exp57 : CALL Exp20 Exp21 
+Stm62 :  ESTM Exp57
+Stm15 : LABEL main_0
+Exp23 : TEMP %rbx
+Exp24 : TEMP t20
+Stm69 : MOVE Exp23 Exp24
+Exp25 : TEMP %r12
+Exp26 : TEMP t19
+Stm74 : MOVE Exp25 Exp26
+Exp27 : TEMP %r13
+Exp28 : TEMP t18
+Stm79 : MOVE Exp27 Exp28
+Exp29 : TEMP %r14
+Exp30 : TEMP t17
+Stm84 : MOVE Exp29 Exp30
+Exp31 : TEMP %r15
+Exp32 : TEMP t16
+Stm89 : MOVE Exp31 Exp32
+Stm92 : JUMP L1
+Stm95 : LABEL L1
+endMethod
+
+

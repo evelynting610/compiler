@@ -1,0 +1,324 @@
+icode1 Good1 linux64
+string L1 "h"
+string L0 "hi"
+globalVar v_1
+globalVar v_0
+mainMethod m_4
+
+method m_0 Stm63 3 0
+Exp59 : TEMP t34
+Exp60 : TEMP %r15
+Stm60 : MOVE Exp59 Exp60
+Exp55 : TEMP t33
+Exp56 : TEMP %r14
+Stm56 : MOVE Exp55 Exp56
+Exp51 : TEMP t32
+Exp52 : TEMP %r13
+Stm52 : MOVE Exp51 Exp52
+Exp47 : TEMP t31
+Exp48 : TEMP %r12
+Stm48 : MOVE Exp47 Exp48
+Exp43 : TEMP t30
+Exp44 : TEMP %rbx
+Stm44 : MOVE Exp43 Exp44
+Exp41 : TEMP t18
+Exp42 : TEMP %rdx
+Stm42 : MOVE Exp41 Exp42
+Exp39 : TEMP t17
+Exp40 : TEMP %rsi
+Stm40 : MOVE Exp39 Exp40
+Exp37 : TEMP t16
+Exp38 : TEMP %rdi
+Stm38 : MOVE Exp37 Exp38
+Exp1 : CONST 0
+Stm1 :  ESTM Exp1
+Stm2 : LABEL f_0
+Stm3 : SEQ Stm1 Stm2
+Stm39 : SEQ Stm38 Stm3
+Stm41 : SEQ Stm40 Stm39
+Stm43 : SEQ Stm42 Stm41
+Stm45 : SEQ Stm44 Stm43
+Exp45 : TEMP %rbx
+Exp46 : TEMP t30
+Stm46 : MOVE Exp45 Exp46
+Stm47 : SEQ Stm45 Stm46
+Stm49 : SEQ Stm48 Stm47
+Exp49 : TEMP %r12
+Exp50 : TEMP t31
+Stm50 : MOVE Exp49 Exp50
+Stm51 : SEQ Stm49 Stm50
+Stm53 : SEQ Stm52 Stm51
+Exp53 : TEMP %r13
+Exp54 : TEMP t32
+Stm54 : MOVE Exp53 Exp54
+Stm55 : SEQ Stm53 Stm54
+Stm57 : SEQ Stm56 Stm55
+Exp57 : TEMP %r14
+Exp58 : TEMP t33
+Stm58 : MOVE Exp57 Exp58
+Stm59 : SEQ Stm57 Stm58
+Stm61 : SEQ Stm60 Stm59
+Exp61 : TEMP %r15
+Exp62 : TEMP t34
+Stm62 : MOVE Exp61 Exp62
+Stm63 : SEQ Stm61 Stm62
+endMethod
+
+
+method m_1 Stm83 0 0
+Exp79 : TEMP t39
+Exp80 : TEMP %r15
+Stm80 : MOVE Exp79 Exp80
+Exp75 : TEMP t38
+Exp76 : TEMP %r14
+Stm76 : MOVE Exp75 Exp76
+Exp71 : TEMP t37
+Exp72 : TEMP %r13
+Stm72 : MOVE Exp71 Exp72
+Exp67 : TEMP t36
+Exp68 : TEMP %r12
+Stm68 : MOVE Exp67 Exp68
+Exp63 : TEMP t35
+Exp64 : TEMP %rbx
+Stm64 : MOVE Exp63 Exp64
+Exp4 : TEMP t19
+Exp2 : CONST 0
+Stm4 : MOVE Exp4 Exp2
+Stm5 : JUMP g_0
+Stm6 : SEQ Stm4 Stm5
+Stm7 : LABEL g_0
+Exp5 : TEMP %rax
+Exp7 : TEMP t19
+Stm8 : MOVE Exp5 Exp7
+Stm9 : SEQ Stm7 Stm8
+Stm10 : SEQ Stm6 Stm9
+Stm65 : SEQ Stm64 Stm10
+Exp65 : TEMP %rbx
+Exp66 : TEMP t35
+Stm66 : MOVE Exp65 Exp66
+Stm67 : SEQ Stm65 Stm66
+Stm69 : SEQ Stm68 Stm67
+Exp69 : TEMP %r12
+Exp70 : TEMP t36
+Stm70 : MOVE Exp69 Exp70
+Stm71 : SEQ Stm69 Stm70
+Stm73 : SEQ Stm72 Stm71
+Exp73 : TEMP %r13
+Exp74 : TEMP t37
+Stm74 : MOVE Exp73 Exp74
+Stm75 : SEQ Stm73 Stm74
+Stm77 : SEQ Stm76 Stm75
+Exp77 : TEMP %r14
+Exp78 : TEMP t38
+Stm78 : MOVE Exp77 Exp78
+Stm79 : SEQ Stm77 Stm78
+Stm81 : SEQ Stm80 Stm79
+Exp81 : TEMP %r15
+Exp82 : TEMP t39
+Stm82 : MOVE Exp81 Exp82
+Stm83 : SEQ Stm81 Stm82
+endMethod
+
+
+method m_2 Stm105 1 0
+Exp101 : TEMP t44
+Exp102 : TEMP %r15
+Stm102 : MOVE Exp101 Exp102
+Exp97 : TEMP t43
+Exp98 : TEMP %r14
+Stm98 : MOVE Exp97 Exp98
+Exp93 : TEMP t42
+Exp94 : TEMP %r13
+Stm94 : MOVE Exp93 Exp94
+Exp89 : TEMP t41
+Exp90 : TEMP %r12
+Stm90 : MOVE Exp89 Exp90
+Exp85 : TEMP t40
+Exp86 : TEMP %rbx
+Stm86 : MOVE Exp85 Exp86
+Exp83 : TEMP t20
+Exp84 : TEMP %rdi
+Stm84 : MOVE Exp83 Exp84
+Exp10 : TEMP t21
+Exp8 : NAME L0
+Stm11 : MOVE Exp10 Exp8
+Stm12 : JUMP h_0
+Stm13 : SEQ Stm11 Stm12
+Stm14 : LABEL h_0
+Exp11 : TEMP %rax
+Exp13 : TEMP t21
+Stm15 : MOVE Exp11 Exp13
+Stm16 : SEQ Stm14 Stm15
+Stm17 : SEQ Stm13 Stm16
+Stm85 : SEQ Stm84 Stm17
+Stm87 : SEQ Stm86 Stm85
+Exp87 : TEMP %rbx
+Exp88 : TEMP t40
+Stm88 : MOVE Exp87 Exp88
+Stm89 : SEQ Stm87 Stm88
+Stm91 : SEQ Stm90 Stm89
+Exp91 : TEMP %r12
+Exp92 : TEMP t41
+Stm92 : MOVE Exp91 Exp92
+Stm93 : SEQ Stm91 Stm92
+Stm95 : SEQ Stm94 Stm93
+Exp95 : TEMP %r13
+Exp96 : TEMP t42
+Stm96 : MOVE Exp95 Exp96
+Stm97 : SEQ Stm95 Stm96
+Stm99 : SEQ Stm98 Stm97
+Exp99 : TEMP %r14
+Exp100 : TEMP t43
+Stm100 : MOVE Exp99 Exp100
+Stm101 : SEQ Stm99 Stm100
+Stm103 : SEQ Stm102 Stm101
+Exp103 : TEMP %r15
+Exp104 : TEMP t44
+Stm104 : MOVE Exp103 Exp104
+Stm105 : SEQ Stm103 Stm104
+endMethod
+
+
+method m_3 Stm131 3 0
+Exp127 : TEMP t49
+Exp128 : TEMP %r15
+Stm128 : MOVE Exp127 Exp128
+Exp123 : TEMP t48
+Exp124 : TEMP %r14
+Stm124 : MOVE Exp123 Exp124
+Exp119 : TEMP t47
+Exp120 : TEMP %r13
+Stm120 : MOVE Exp119 Exp120
+Exp115 : TEMP t46
+Exp116 : TEMP %r12
+Stm116 : MOVE Exp115 Exp116
+Exp111 : TEMP t45
+Exp112 : TEMP %rbx
+Stm112 : MOVE Exp111 Exp112
+Exp109 : TEMP t24
+Exp110 : TEMP %rdx
+Stm110 : MOVE Exp109 Exp110
+Exp107 : TEMP t23
+Exp108 : TEMP %rsi
+Stm108 : MOVE Exp107 Exp108
+Exp105 : TEMP t22
+Exp106 : TEMP %rdi
+Stm106 : MOVE Exp105 Exp106
+Stm18 : JUMP f_1
+Stm19 : LABEL f_1
+Stm20 : SEQ Stm18 Stm19
+Stm107 : SEQ Stm106 Stm20
+Stm109 : SEQ Stm108 Stm107
+Stm111 : SEQ Stm110 Stm109
+Stm113 : SEQ Stm112 Stm111
+Exp113 : TEMP %rbx
+Exp114 : TEMP t45
+Stm114 : MOVE Exp113 Exp114
+Stm115 : SEQ Stm113 Stm114
+Stm117 : SEQ Stm116 Stm115
+Exp117 : TEMP %r12
+Exp118 : TEMP t46
+Stm118 : MOVE Exp117 Exp118
+Stm119 : SEQ Stm117 Stm118
+Stm121 : SEQ Stm120 Stm119
+Exp121 : TEMP %r13
+Exp122 : TEMP t47
+Stm122 : MOVE Exp121 Exp122
+Stm123 : SEQ Stm121 Stm122
+Stm125 : SEQ Stm124 Stm123
+Exp125 : TEMP %r14
+Exp126 : TEMP t48
+Stm126 : MOVE Exp125 Exp126
+Stm127 : SEQ Stm125 Stm126
+Stm129 : SEQ Stm128 Stm127
+Exp129 : TEMP %r15
+Exp130 : TEMP t49
+Stm130 : MOVE Exp129 Exp130
+Stm131 : SEQ Stm129 Stm130
+endMethod
+
+
+method m_4 Stm153 1 0
+Exp149 : TEMP t54
+Exp150 : TEMP %r15
+Stm150 : MOVE Exp149 Exp150
+Exp145 : TEMP t53
+Exp146 : TEMP %r14
+Stm146 : MOVE Exp145 Exp146
+Exp141 : TEMP t52
+Exp142 : TEMP %r13
+Stm142 : MOVE Exp141 Exp142
+Exp137 : TEMP t51
+Exp138 : TEMP %r12
+Stm138 : MOVE Exp137 Exp138
+Exp133 : TEMP t50
+Exp134 : TEMP %rbx
+Stm134 : MOVE Exp133 Exp134
+Exp131 : TEMP t25
+Exp132 : TEMP %rdi
+Stm132 : MOVE Exp131 Exp132
+Exp14 : CONST 0
+Stm21 :  ESTM Exp14
+Exp18 : TEMP t27
+Exp17 : NAME L1
+Stm22 : MOVE Exp18 Exp17
+Exp16 : TEMP t26
+Exp19 : TEMP t27
+Stm23 : MOVE Exp16 Exp19
+Stm24 : SEQ Stm22 Stm23
+Exp20 : TEMP t27
+Exp21 : ESEQ Stm24 Exp20
+Stm25 :  ESTM Exp21
+Stm26 : SEQ Stm21 Stm25
+Exp22 : CONST 0
+Stm27 :  ESTM Exp22
+Stm28 : SEQ Stm26 Stm27
+Exp29 : TEMP t29
+Exp27 : NAME m_2
+Exp26 : TEMP t26
+Exp28 : CALL Exp27 Exp26 
+Stm29 : MOVE Exp29 Exp28
+Exp24 : TEMP t28
+Exp30 : TEMP t29
+Stm30 : MOVE Exp24 Exp30
+Stm31 : SEQ Stm29 Stm30
+Exp31 : TEMP t29
+Exp32 : ESEQ Stm31 Exp31
+Stm32 :  ESTM Exp32
+Stm33 : SEQ Stm28 Stm32
+Exp35 : NAME b_printString_0
+Exp34 : TEMP t28
+Exp36 : CALL Exp35 Exp34 
+Stm34 :  ESTM Exp36
+Stm35 : SEQ Stm33 Stm34
+Stm36 : LABEL main_0
+Stm37 : SEQ Stm35 Stm36
+Stm133 : SEQ Stm132 Stm37
+Stm135 : SEQ Stm134 Stm133
+Exp135 : TEMP %rbx
+Exp136 : TEMP t50
+Stm136 : MOVE Exp135 Exp136
+Stm137 : SEQ Stm135 Stm136
+Stm139 : SEQ Stm138 Stm137
+Exp139 : TEMP %r12
+Exp140 : TEMP t51
+Stm140 : MOVE Exp139 Exp140
+Stm141 : SEQ Stm139 Stm140
+Stm143 : SEQ Stm142 Stm141
+Exp143 : TEMP %r13
+Exp144 : TEMP t52
+Stm144 : MOVE Exp143 Exp144
+Stm145 : SEQ Stm143 Stm144
+Stm147 : SEQ Stm146 Stm145
+Exp147 : TEMP %r14
+Exp148 : TEMP t53
+Stm148 : MOVE Exp147 Exp148
+Stm149 : SEQ Stm147 Stm148
+Stm151 : SEQ Stm150 Stm149
+Exp151 : TEMP %r15
+Exp152 : TEMP t54
+Stm152 : MOVE Exp151 Exp152
+Stm153 : SEQ Stm151 Stm152
+endMethod
+
+

@@ -1,0 +1,72 @@
+icode1 T linux64
+string L0 "Hello\n"
+mainMethod m_0
+
+method m_0 Stm32 1 0
+Exp31 : TEMP t23
+Exp32 : TEMP %r15
+Stm29 : MOVE Exp31 Exp32
+Exp27 : TEMP t22
+Exp28 : TEMP %r14
+Stm25 : MOVE Exp27 Exp28
+Exp23 : TEMP t21
+Exp24 : TEMP %r13
+Stm21 : MOVE Exp23 Exp24
+Exp19 : TEMP t20
+Exp20 : TEMP %r12
+Stm17 : MOVE Exp19 Exp20
+Exp15 : TEMP t19
+Exp16 : TEMP %rbx
+Stm13 : MOVE Exp15 Exp16
+Exp13 : TEMP t16
+Exp14 : TEMP %rdi
+Stm11 : MOVE Exp13 Exp14
+Exp1 : CONST 0
+Stm1 :  ESTM Exp1
+Exp5 : TEMP t18
+Exp4 : NAME L0
+Stm2 : MOVE Exp5 Exp4
+Exp3 : TEMP t17
+Exp6 : TEMP t18
+Stm3 : MOVE Exp3 Exp6
+Stm4 : SEQ Stm2 Stm3
+Exp7 : TEMP t18
+Exp8 : ESEQ Stm4 Exp7
+Stm5 :  ESTM Exp8
+Stm6 : SEQ Stm1 Stm5
+Exp11 : NAME b_printString_0
+Exp10 : TEMP t17
+Exp12 : CALL Exp11 Exp10 
+Stm7 :  ESTM Exp12
+Stm8 : SEQ Stm6 Stm7
+Stm9 : LABEL main_0
+Stm10 : SEQ Stm8 Stm9
+Stm12 : SEQ Stm11 Stm10
+Stm14 : SEQ Stm13 Stm12
+Exp17 : TEMP %rbx
+Exp18 : TEMP t19
+Stm15 : MOVE Exp17 Exp18
+Stm16 : SEQ Stm14 Stm15
+Stm18 : SEQ Stm17 Stm16
+Exp21 : TEMP %r12
+Exp22 : TEMP t20
+Stm19 : MOVE Exp21 Exp22
+Stm20 : SEQ Stm18 Stm19
+Stm22 : SEQ Stm21 Stm20
+Exp25 : TEMP %r13
+Exp26 : TEMP t21
+Stm23 : MOVE Exp25 Exp26
+Stm24 : SEQ Stm22 Stm23
+Stm26 : SEQ Stm25 Stm24
+Exp29 : TEMP %r14
+Exp30 : TEMP t22
+Stm27 : MOVE Exp29 Exp30
+Stm28 : SEQ Stm26 Stm27
+Stm30 : SEQ Stm29 Stm28
+Exp33 : TEMP %r15
+Exp34 : TEMP t23
+Stm31 : MOVE Exp33 Exp34
+Stm32 : SEQ Stm30 Stm31
+endMethod
+
+
